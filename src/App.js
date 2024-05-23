@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Homepage from "./Homepage";
 
 function App() {
+  const [vari, setvari] = useState("hello world");
+  const [varij, setvarij] = useState("hello world");
+  const [varik, setvarik] = useState("hello world");
+  function h() {
+    setvari("123");
+  }
+  function i() {
+    setvarij("345");
+  }
+  function j() {
+    setvarik("768");
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* sending the props */}
+      <Homepage vari={vari} varij = {varij} varik = {varik} h={h} i={i} j={j} />
+    </>
   );
 }
 
