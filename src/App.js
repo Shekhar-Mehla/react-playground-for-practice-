@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Homepage from "./Homepage";
+import List from "./List";
 
 function App() {
   const [vari, setvari] = useState("hello world");
@@ -18,7 +19,10 @@ function App() {
   return (
     <>
       {/* sending the props */}
-      <Homepage vari={vari} varij = {varij} varik = {varik} h={h} i={i} j={j} />
+      <Homepage vari={vari} varij={varij} varik={varik} h={h} i={i} j={j} />
+
+      {/* "list component" */}
+      <List></List>
     </>
   );
 }
